@@ -1,55 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personnel System</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-        }
-        header {
-            background: #007BFF;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-        }
-        .container {
-            background: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        button {
-            background: #28A745;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        button:hover {
-            background: #218838;
-        }
-    </style>
+    <title>Personel Sistemi</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Personnel System</h1>
+        <h1>Personel Sistemi</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Ana Sayfa</a></li>
+                <li><a href="#">Personeller</a></li>
+                <li><a href="#">Ayarlar</a></li>
+                <li><a href="#">Çıkış</a></li>
+            </ul>
+        </nav>
     </header>
-    <div class="container">
-        <h2>Welcome to the Personnel System</h2>
-        <p>This system is designed to manage personnel information effectively.</p>
-        <button onclick="showAlert()">Click Me!</button>
-    </div>
-
-    <script>
-        function showAlert() {
-            alert("Welcome to the Personnel System!");
-        }
-    </script>
+    <main>
+        <section id="search">
+            <input type="text" id="searchInput" placeholder="Ara...">
+            <button id="searchButton">Ara</button>
+        </section>
+        <section id="filters">
+            <label for="departmentFilter">Departman:</label>
+            <select id="departmentFilter">
+                <option value="tümü">Tümü</option>
+                <option value="hr">İK</option>
+                <option value="it">BT</option>
+                <option value="sales">Satış</option>
+            </select>
+            <button id="filterButton">Filtrele</button>
+        </section>
+        <section id="personnelCards">
+            <!-- Personel kartları buraya eklenecek -->
+        </section>
+    </main>
+    <footer>
+        <p>© 2026 Personel Sistemi</p>
+    </footer>
 </body>
 </html>
